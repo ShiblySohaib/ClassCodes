@@ -1,4 +1,4 @@
-public class car {
+public class car extends vehicle {
     public void move(){
         System.out.println("Car moves faster");
     }
