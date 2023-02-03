@@ -1,0 +1,31 @@
+hr{
+    height: 2px;
+    background-color: #025d81;
+    border: none;
+}
+.section{
+    color: #025d81;
+    text-align: left;
+}
+li{
+    color: #025d81;
+    padding-left: 20px;
+}
+table{
+    margin: auto;
+    border-collapse: collapse;
+}
+tr{
+    text-align: center;
+    height: 50px;
+}
+th{
+    width: 200px;
+    border:  2px solid black;
+    background-color: #025d81;
+    color: white;
+}
+td{
+    width: 200px;
+    border:  2px solid black;
+}
