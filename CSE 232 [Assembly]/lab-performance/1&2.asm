@@ -15,7 +15,7 @@
     
 .CODE
 
-MAIN PROC NEAR 
+MAIN PROC 
     MOV AX, @DATA
     MOV DS, AX
                
