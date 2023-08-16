@@ -71,14 +71,14 @@ MAIN PROC
     l1:
     xchg bl,cl    
     
-    ;bl smaller than cl
+    ;now bl is smaller than cl
 
     l2:    
     cmp cl,dl
     jl print
     
     xchg dl,cl
-    ;dl is larger than cl
+    ;now cl is smaller than dl
     
     
     cmp bl,cl
@@ -86,6 +86,7 @@ MAIN PROC
     
     
     xchg bl,cl
+    ;now bl is smaller than cl
         
     
     print:
