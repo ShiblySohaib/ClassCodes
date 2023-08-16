@@ -86,7 +86,7 @@ MAIN PROC
     
     
     xchg bl,cl
-    ;now bl is smaller than cl
+    ;now bl is smaller than cl and dl
         
     
     print:
