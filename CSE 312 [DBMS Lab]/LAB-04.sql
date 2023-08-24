@@ -23,6 +23,8 @@ SELECT CustomerName FROM customers WHERE CustomerName LIKE 'A%'; -- starts with 
 
 SELECT CustomerName FROM customers WHERE CustomerName LIKE '%A'; -- ends with A
 
+SELECT CustomerName FROM customers WHERE CustomerName LIKE 'A%H'; -- starts with A, ends with H
+
 SELECT CustomerName FROM customers WHERE CustomerName LIKE '%A%'; -- contains A
 
 SELECT CustomerName FROM customers WHERE CustomerName LIKE '_A%'; -- second letter A
