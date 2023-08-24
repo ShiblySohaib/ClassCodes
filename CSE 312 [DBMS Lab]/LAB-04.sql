@@ -18,3 +18,9 @@ SELECT CustomerName FROM customers WHERE Country = 'Germany' OR City = 'London';
 SELECT CustomerName FROM customers WHERE Country = 'Germany' ANd CustomerID>=5 AND CustomerID<=10;
 
 SELECT CustomerName FROM customers WHERE Country = 'Germany' ANd CustomerID BETWEEN 5 AND 10;
+
+SELECT CustomerName FROM customers WHERE CustomerName LIKE 'A%';
+
+SELECT CustomerName FROM customers WHERE CustomerName LIKE '%A';
+
+SELECT CustomerName FROM customers WHERE CustomerName LIKE '%A%';
