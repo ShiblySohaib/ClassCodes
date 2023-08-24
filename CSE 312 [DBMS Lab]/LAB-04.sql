@@ -12,3 +12,5 @@ SELECT ProductName as G20 FROM products WHERE price > 20;
 SELECT ProductName as LE50 FROM products WHERE price <= 50;
 SELECT ProductName as GE50 FROM products WHERE price >= 50;
 SELECT ProductName as NE50 FROM products WHERE Price <> 50;
+
+SELECT CustomerName FROM customers WHERE Country = 'Germany' OR City = 'London'
