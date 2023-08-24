@@ -19,8 +19,14 @@ SELECT CustomerName FROM customers WHERE Country = 'Germany' ANd CustomerID>=5 A
 
 SELECT CustomerName FROM customers WHERE Country = 'Germany' ANd CustomerID BETWEEN 5 AND 10;
 
-SELECT CustomerName FROM customers WHERE CustomerName LIKE 'A%';
+SELECT CustomerName FROM customers WHERE CustomerName LIKE 'A%'; -- starts with A
 
-SELECT CustomerName FROM customers WHERE CustomerName LIKE '%A';
+SELECT CustomerName FROM customers WHERE CustomerName LIKE '%A'; -- ends with A
 
-SELECT CustomerName FROM customers WHERE CustomerName LIKE '%A%';
+SELECT CustomerName FROM customers WHERE CustomerName LIKE '%A%'; -- contains A
+
+SELECT CustomerName FROM customers WHERE CustomerName LIKE '_A%'; -- second letter A
+
+SELECT CustomerName FROM customers WHERE CustomerName LIKE 'P_%'; -- First letter p and len>2
+
+SELECT CustomerName FROM customers WHERE CustomerName LIKE 'P__%'; -- Frist letter p and len>3
