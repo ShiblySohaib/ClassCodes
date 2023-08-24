@@ -6,3 +6,9 @@ SELECT (50+60) as Addition,
 
 
 update products set price = price+20 where ProductName = 'Tofu'
+
+SELECT ProductName as L20 FROM products WHERE price < 20;
+SELECT ProductName as G20 FROM products WHERE price > 20;
+SELECT ProductName as LE50 FROM products WHERE price <= 50;
+SELECT ProductName as GE50 FROM products WHERE price >= 50;
+SELECT ProductName as NE50 FROM products WHERE Price <> 50;
