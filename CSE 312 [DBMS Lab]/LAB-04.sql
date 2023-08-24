@@ -16,3 +16,5 @@ SELECT ProductName as NE50 FROM products WHERE Price <> 50;
 SELECT CustomerName FROM customers WHERE Country = 'Germany' OR City = 'London';
 
 SELECT CustomerName FROM customers WHERE Country = 'Germany' ANd CustomerID>=5 AND CustomerID<=10;
+
+SELECT CustomerName FROM customers WHERE Country = 'Germany' ANd CustomerID BETWEEN 5 AND 10;
