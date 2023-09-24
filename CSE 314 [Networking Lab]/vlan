@@ -1,0 +1,29 @@
+//create vlans
+Switch#enable
+Switch#config t
+Switch(config)#vlan 500
+Switch(config-vlan)#ex
+Switch(config)#vlan 505
+Switch(config-vlan)#ex
+
+//set range for vlan
+Switch(config)#int range f0/1-4
+Switch(config-if-range)#switchport mode access
+Switch(config-if-range)#switchport access vlan 500
+Switch(config-if-range)#ex
+Switch(config)#int range f0/5-8
+Switch(config-if-range)#switchport mode access
+Switch(config-if-range)#switchport access vlan 505
+Switch(config-if-range)#ex
+Switch(config)#^Z
+Switch#show vlan
+Switch#copy run start
+Switch#config t
+Switch(config)#int range f0/20
+Switch(config-if-range)#switchport mode trunk
+Switch(config-if-range)#end
+Switch#config t
+Switch(config)#int f0/21
+Switch(config-if)#switchport mode trunk
+Switch(config-if)#end
+Switch#copy run start
