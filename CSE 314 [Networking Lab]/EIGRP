@@ -1,0 +1,4 @@
+Router (config)#router eigrp 500
+Router (config)#network 192.168.50.0
+Router (config)#network 192.168.60.0
+Router (config)#network 192.168.69.0
