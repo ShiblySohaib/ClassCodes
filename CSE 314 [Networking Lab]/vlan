@@ -1,3 +1,4 @@
+Switch:
 //create vlans
 Switch#enable
 Switch#config t
@@ -27,3 +28,34 @@ Switch(config)#int f0/21
 Switch(config-if)#switchport mode trunk
 Switch(config-if)#end
 Switch#copy run start
+
+
+
+
+Router:
+Router>en
+Router#config t
+Router(config)#int f0/0
+Router(config-if)#no shut
+Router(config)#int f0/0.500
+Router(config-subif)#encapsulation dot1Q 500
+Router(config-subif)#ip add 198.168.10.1 255.255.255.192
+Router(config-subif)#no shut
+Router(config-subif)#ex
+Router(config)#int f0/0.505
+Router(config-subif)#encapsulation dot1Q 505
+Router(config-subif)#ip add 198.168.12.1 255.255.255.192
+Router(config-subif)#no shut
+Router(config-subif)#ex
+Router(config)#int f1/0 
+Router(config-if)#no shut 
+Router(config)#int f1/0.510 
+Router(config-subif)#encapsulation dot1Q 510 
+Router(config-subif)#ip add 198.168.15.1 255.255.255.192 
+Router(config-subif)#no shut 
+Router(config-subif)#ex 
+Router(config)#int f0/0.515 
+Router(config-subif)#encapsulation dot1Q 515 
+Router(config-subif)#ip add 198.168.18.1 255.255.255.192 
+Router(config-subif)#no shut 
+Router(config-subif)#ex
