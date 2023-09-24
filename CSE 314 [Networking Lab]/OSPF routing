@@ -1,0 +1,8 @@
+Router(config)#router ospf 100
+Router(config-router)#network 154.154.0.0 0.0.255.255 area 1
+Router(config-router)#network 157.157.156.0 0.0.3.255 area 1
+Router(config-router)#network 159.159.156.0 0.0.3.255 area 1
+Router(config-router)#network 170.170.168.0 0.0.3.255 area 1
+Router(config-router)#network 165.165.164.0 0.0.3.255 area 1
+
+  //network N.adress wild mask(max mask-sub mask) area
