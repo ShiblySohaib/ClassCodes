@@ -1,0 +1,9 @@
+Router>en
+Router#config t
+Router(config)#ip dhcp pool router0
+Router(dhcp-config)#network 154.154.0.0 255.255.0.0
+Router(dhcp-config)#default-router 154.154.0.1 
+Router(dhcp-config)#ex
+Router(config)#int f0/0
+Router(config-if)#ip add 154.154.0.1 255.255.0.0
+Router(config-if)#no shut
