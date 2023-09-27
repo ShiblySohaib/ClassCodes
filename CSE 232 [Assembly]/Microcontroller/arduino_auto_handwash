@@ -1,0 +1,45 @@
+#include <Servo.h>
+
+const int sensorout = 10;  
+const int sensorin = 11;  
+int distance;
+
+Servo myservo;    
+int pos = 0;    
+void setup() {
+  pinMode(sensorout, OUTPUT);    
+  pinMode(sensorin, INPUT);   
+
+  myservo.attach(9);      
+  myservo.write(0);        
+  Serial.begin(9600);      
+}
+void loop() {
+
+    digitalWrite(sensorout, LOW);  
+    delayMicroseconds(2);
+    digitalWrite(sensorout, HIGH);
+    delayMicroseconds(10);
+    digitalWrite(sensorout, LOW);
+    
+    float duration = pulseIn(sensorin, HIGH);
+   
+    distance= duration*0.034/2; 
+    
+    Serial.print("Distance: ");
+    Serial.println(distance);
+    
+    
+    if(distance<100)   
+    { 
+       myservo.write(45); 
+       delay(100);
+       myservo.write(90);
+       delay(100);
+       myservo.write(120);
+       delay(1000);
+       myservo.write(00); 
+       delay(2500);   
+    }                 
+}
+//https://wokwi.com/projects/377008987497321473
