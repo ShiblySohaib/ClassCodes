@@ -1,5 +1,3 @@
-import 'package:dart_class/dart_class.dart' as dart_class;
-
 void main(List<String> arguments) {
   var num1 = 100;
   var num2 = 30;
