@@ -1,6 +1,3 @@
-import 'package:dart_class/dart_class.dart' as dart_class;
-import 'dart:io';
-
 int findIndex(List<int> list, int target){
   for(int i=0;i<list.length;i++){
     if(list[i]==target){
