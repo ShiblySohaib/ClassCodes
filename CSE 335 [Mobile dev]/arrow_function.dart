@@ -1,5 +1,3 @@
-import 'package:dart_class/dart_class.dart' as dart_class;
-
 int add(int n1, int n2)=>n1+n2;
 int sub(int n1, int n2)=>n1-n2;
 int mul(int n1, int n2)=>n1*n2;
