@@ -1,5 +1,3 @@
-import 'package:dart_class/dart_class.dart' as dart_class;
-
 class Person{
   String? name;
   int? age;
