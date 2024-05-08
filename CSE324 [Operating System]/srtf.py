@@ -1,4 +1,4 @@
-def avg_wt(arrival_time, burst_time):
+def srtf(arrival_time, burst_time):
     n = len(arrival_time)
 
     completion_time = [0] * n
@@ -10,6 +10,7 @@ def avg_wt(arrival_time, burst_time):
     while True:
         shortest_remaining_index = -1
         shortest_remaining_time = float('inf')
+        idle = True
 
         for i in range(n):
             if (arrival_time[i] <= current_time and
@@ -17,9 +18,13 @@ def avg_wt(arrival_time, burst_time):
                 remaining_burst_time[i] > 0):
                 shortest_remaining_time = remaining_burst_time[i]
                 shortest_remaining_index = i
+                idle = False
 
-        if shortest_remaining_index == -1:
-            break
+        if idle:
+            if sum(remaining_burst_time) == 0:
+                break
+            current_time += 1
+            continue
 
         remaining_burst_time[shortest_remaining_index] -= 1
 
@@ -35,6 +40,6 @@ def avg_wt(arrival_time, burst_time):
 arrival_time = [0, 1, 2, 3]
 burst_time = [8, 4, 9, 5]
 
-average_waiting_time = avg_wt(arrival_time, burst_time)
+average_waiting_time = srtf(arrival_time, burst_time)
 
 print(f"Average waiting time: {average_waiting_time}")
