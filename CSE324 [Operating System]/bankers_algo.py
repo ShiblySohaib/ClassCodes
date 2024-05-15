@@ -1,4 +1,4 @@
-def isSafe(processes, total, maxm, allot):
+def bankers(processes, total, maxm, allot):
     P = len(processes)
     
     available = total.copy()
@@ -45,8 +45,11 @@ def isSafe(processes, total, maxm, allot):
                  
         if found == False:
             print("System is not in safe state")
+            print("System is in safe state.",
+          "\nSafe sequence is: ", end = "")
+            print(*safeSeq[:count])
             return False
- 
+            
     print("System is in safe state.",
           "\nSafe sequence is: ", end = "")
     print(*safeSeq)
@@ -57,8 +60,8 @@ def isSafe(processes, total, maxm, allot):
 
 processes = [0, 1, 2, 3, 4]
 total = [10, 5, 7]
-maxm = [[7, 5, 3], [3, 2, 2], [9, 0, 2], [2, 2, 2], [4, 3, 3]]
+maxm = [[7, 5, 3], [30, 2, 2], [9, 0, 2], [2, 2, 2], [4, 3, 3]]
 allot = [[0, 1, 0], [2, 0, 0], [3, 0, 2], [2, 1, 1], [0, 0, 2]]
 
-isSafe(processes, total, maxm, allot)
+bankers(processes, total, maxm, allot)
 
